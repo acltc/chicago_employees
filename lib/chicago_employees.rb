@@ -4,13 +4,15 @@ require "chicago_employees/version"
 require "chicago_employees/employee"
 
 module ChicagoEmployees
+  BASE_URL = "http://data.cityofchicago.org/resource/xzkq-xp2w.json"
+
   def self.all
-    employee_hashes = Unirest.get("http://data.cityofchicago.org/resource/xzkq-xp2w.json").body
+    employee_hashes = Unirest.get(BASE_URL).body
     generate_employees(employee_hashes)
   end
 
   def self.where(hash)
-    url = "http://data.cityofchicago.org/resource/xzkq-xp2w.json"
+    url = BASE_URL
     url += "?#{hash.keys.first.to_s}=#{hash.values.first}"
     employee_hashes = Unirest.get(url).body
     generate_employees(employee_hashes)
