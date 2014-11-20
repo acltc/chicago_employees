@@ -14,6 +14,10 @@ module ChicagoEmployees
   def self.where(hash)
     url = BASE_URL
     url += "?#{hash.keys.first.to_s}=#{hash.values.first}"
+    hash.delete(hash.keys.first)
+    hash.each do |key, value|
+      url += "&#{key.to_s}=#{value}"
+    end
     employee_hashes = Unirest.get(url).body
     generate_employees(employee_hashes)
   end
