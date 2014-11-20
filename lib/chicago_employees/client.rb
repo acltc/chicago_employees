@@ -1,5 +1,5 @@
 require 'unirest'
-require 'employee'
+require_relative 'employee'
 
 module ChicagoEmployees
   class Client
