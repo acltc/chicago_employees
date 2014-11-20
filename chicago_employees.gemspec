@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["jaywngrw@gmail.com"]
   spec.summary       = %q{A Ruby wrapper to obtain data regarding City of Chicago Employees.}
   spec.description   = %q{A Ruby wrapper to obtain data regarding City of Chicago Employees.}
-  spec.homepage      = ""
+  spec.homepage      = "https://github.com/acltc/chicago_employees"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
