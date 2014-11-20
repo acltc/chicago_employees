@@ -1,12 +1,12 @@
 module ChicagoEmployees
   class Employee
-    attr_accessor :job_title, :department, :name, :salary
+    attr_accessor :job_titles, :department, :name, :employee_annual_salary
 
     def initialize(hash)
-      @job_title = hash["job_titles"]
+      @job_titles = hash["job_titles"]
       @department = hash["department"]
       @name = hash["name"]
-      @salary = hash["employee_annual_salary"]
+      @employee_annual_salary = hash["employee_annual_salary"]
     end
   end
 end

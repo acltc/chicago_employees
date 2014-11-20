@@ -12,4 +12,15 @@ module ChicagoEmployees
     end
     employees
   end
+
+  def self.where(hash)
+    employees = []
+    url = "http://data.cityofchicago.org/resource/xzkq-xp2w.json"
+    url += "?#{hash.keys.first.to_s}=#{hash.values.first}"
+    employee_hashes = Unirest.get(url).body
+    employee_hashes.each do |hash|
+      employees << Employee.new(hash)
+    end
+    employees
+  end
 end
