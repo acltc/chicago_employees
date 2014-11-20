@@ -20,7 +20,14 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+To get all employees, use:
+
+    ChicagoEmployees.all
+
+To filter by specific attributes, use the `where` command:
+
+    ChicagoEmployees.where(:department => "WATER MGMNT", :employee_annual_salary => "70408.00")
+
 
 ## Contributing
 
