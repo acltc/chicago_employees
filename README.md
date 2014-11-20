@@ -1,6 +1,6 @@
 # ChicagoEmployees
 
-TODO: Write a gem description
+A Ruby API wrapper for data about the employees of the City of Chicago, based on [City of Chicago Open Data Portal](https://data.cityofchicago.org/Administration-Finance/Current-Employee-Names-Salaries-and-Position-Title/xzkq-xp2w) 
 
 ## Installation
 
